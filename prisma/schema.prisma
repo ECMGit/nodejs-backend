@@ -1,0 +1,19 @@
+// define your database configuration here
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root:12345@localhost:3306/ebean_prisma?autoReconnect=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC"
+}
+
+// define the data model here
+
+model User {
+  id       Int    @id @default(autoincrement())
+  username String @unique
+  password String
+  email String
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
