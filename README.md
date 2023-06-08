@@ -16,3 +16,4 @@ npx prisma db push
 
 ## References
 Testing with Jest and Supertest(Javascript): https://www.albertgao.xyz/2017/05/24/how-to-test-expressjs-with-jest-and-supertest/
+Best Practice with nodejs: https://github.com/goldbergyoni/nodebestpractices?ref=blog.treblle.com
