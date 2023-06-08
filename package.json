@@ -4,7 +4,7 @@
   "description": "nodejs backend template based on Express",
   "main": "dist",
   "scripts": {
-    "start": "node dist/app.js",
+    "start": "node dist/server.js",
     "build": "tsc",
     "dev": "ts-node src/server.ts",
     "test": "jest --detectOpenHandles"
