@@ -1,8 +1,8 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const { PrismaClient } = require('@prisma/client');
+import express from 'express';
+import bodyParser from 'body-parser';
+import { PrismaClient } from '@prisma/client';
+
 const app = express();
-const PORT = 9000;
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -62,7 +62,9 @@ app.post('/user/login', async (req, res) => {
   }
 });
 
-// Start the server
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+app.get("/", (req, res) => {
+  res.status(200).send("Hello World!");
 });
+
+
+export default app;
