@@ -54,8 +54,9 @@ app.post('/user/login', async (req, res) => {
     if (user.password !== password) {
       return res.status(401).json({ error: 'Invalid username or password' });
     }
-
-    return res.status(200).json({ message: 'Login successful' });
+    // Exclude password and other sensitive fields before sending
+    const { password: _, ...safeUser } = user;
+    return res.status(200).json({ message: 'Login successful', user: safeUser});
   } catch (error) {
     console.error(error);
     return res.status(500).json({ error: 'Internal Server Error' });
