@@ -7,7 +7,7 @@ import {prisma} from '../../prisma';
 const router = express.Router();
 
 router.post('/password-reset-link', async (req, res) => {
-
+  const { email } = req.body;
   // todo: write your code here
   // 1. verify if email is in database
 
